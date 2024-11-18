@@ -1,0 +1,78 @@
+@import url("./default.css");
+@import url("./fonts.css");
+body{
+    background: url(../img/hero.jpg) no-repeat;
+    background-size: contain;
+    font-family: "MuseoSansCyrl";
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    max-width: 1920px;
+    min-height: 850px;
+    margin: 0 auto;
+}
+a{
+    color: #fff;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 50px;
+}
+h4{
+    
+}
+.container{
+    width: 1300px;
+    margin: 0 auto;
+
+}
+/*код для бокового меню*/
+.side-menu{
+    position: fixed;
+    line-height: 21px;
+    right: 52px;
+    top: 40%;
+    border-right: 2px solid #ccc;
+}
+.side-menu li:has(a.active){
+    border-right: 3px solid #fff;
+}
+.side-menu li{
+    padding-right: 2px;
+}
+.side-menu a{
+    color: #ccc;
+    display: block;
+    padding: 12px;
+}
+.side-menu a.active{
+    color: #fff;
+    font-weight: 700;
+    cursor: default;
+}
+
+.side-menu a:hover{
+    color: #fff; 
+}
+
+/*header*/
+header{
+    padding: 17px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-nav{
+    display: flex;
+}
+.site-nav a:hover{
+    
+}

@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "MuseoSansCyrl";
+    src: url("../fonts/MuseoSansCyrl100.otf");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "MuseoSansCyrl";
+    src: url("../fonts/MuseoSansCyrl100.otf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "MuseoSansCyrl";
+    src: url("../fonts/MuseoSansCyrl500.otf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "MuseoSansCyrl";
+    src: url("../fonts/MuseoSansCyrl700.otf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "MuseoSansCyrl";
+    src: url("../fonts/MuseoSansCyrl900.otf");
+    font-weight: 900;
+}
+
+
+
+
+
+
+/*
+@font-face {
+    font-family: "SF Pro";
+    src: url("../fonts/SF-Pro-Display-Medium.otf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "SF Pro";
+    src: url("../fonts/SF-Pro-Display-Bold.otf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "SF Pro";
+    src: url("../fonts/SF-Pro-Display-Light.otf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "SF Pro";
+    src: url("../fonts/SF-Pro-Display-Black.otf");
+    font-weight: 900;
+}
+    */
