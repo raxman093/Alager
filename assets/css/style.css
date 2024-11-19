@@ -11,6 +11,9 @@ body{
     min-height: 850px;
     margin: 0 auto;
 }
+header{
+    
+}
 a{
     color: #fff;
 }
@@ -22,9 +25,10 @@ h1{
 }
 h2{
     font-size: 50px;
+    font-weight: 900;
 }
 h3{
-    font-size: 50px;
+    font-size: 16px;
 }
 h4{
     
@@ -69,10 +73,125 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 120px;
+    margin-bottom: 6%;
 }
 .site-nav{
     display: flex;
+    align-items: center;
+    font-weight: 400;
 }
-.site-nav a:hover{
-    helo
+.site-nav a::after{
+    content: " ";
+    display: block;
+    background-color: #FF3046;
+    width: 0;
+    height: 2px;
+    margin: 4px auto 0 auto;
+    position: absolute;
+    left: 25%;
 }
+.site-nav li:hover:not(:last-child) a::after{
+    width: 51%;
+}
+.site-nav li{
+    position: relative;
+    margin: 0 30px;
+}
+.site-nav li:last-child{
+    margin-right: 0;
+}
+.site-nav li:last-child a{
+    display: block;
+    padding: 10px 20px;
+    color: #FF3047;
+    background-color: #fff;
+}
+.site-nav li a{
+
+    border-radius: 5px;
+    font-size: 14px;
+}
+/* Блок hero*/
+#hero{
+    margin-bottom: 190px;
+}
+
+.data-hero{
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 400;
+    margin-bottom: 22px;
+    margin-bottom: 1.6%;
+}
+#hero h1{
+    width: 95%;
+    margin-bottom: 37px;
+    margin-bottom: 3%;
+}
+#hero p{
+    line-height: 36px;
+    font-size: 20px;
+    margin-bottom: 51px;
+    margin-bottom: 4%;
+}
+.present-download{
+    display: block;
+    font-size: 20px;
+    line-height: 29px;
+
+    border-radius: 5px;
+    width: 237px;
+    padding: 20px 37px 19px 81px;
+    background: #FF2A42 url(../img/pdf-ico.png) no-repeat 28px center;
+}
+
+/* Блок technology*/
+#technology{
+    padding-top: 115px;
+    position: relative;
+}
+#technology h2{
+    line-height: 54px;
+    color: #202020;
+    text-align: center;
+    margin-bottom: 66px;
+    
+} 
+#technology a{
+    color: #626262;
+}
+.slide-links{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.slide-links li{
+    width: 21%;
+    margin: 0 1%;
+}
+.slide-link p{
+    margin-top: 15px;
+}
+.slide{
+    color: #202020;
+    display: flex;
+}
+.slide-ico{
+    display: inline-block;
+    height: 60px;
+    position: relative;
+}
+.ico-active{
+    position: absolute;
+    left: 0;
+    display: none;
+    top: 0;
+}
+.slide-links a.actve{
+    color: #C91226;
+}
+.slide-link.active .ico-active{
+    display: block;
+}
+
