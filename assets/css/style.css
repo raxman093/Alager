@@ -28,7 +28,7 @@ h2{
     font-weight: 900;
 }
 h3{
-    font-size: 16px;
+    font-size: 18px;
 }
 h4{
     
@@ -36,6 +36,7 @@ h4{
 .container{
     width: 1300px;
     margin: 0 auto;
+    outline: 0px solid red;
 
 }
 /*код для бокового меню*/
@@ -43,7 +44,7 @@ h4{
     position: fixed;
     line-height: 21px;
     right: 52px;
-    top: 40%;
+    top: 30%;
     border-right: 2px solid #ccc;
 }
 .side-menu li:has(a.active){
@@ -148,8 +149,12 @@ header{
 
 /* Блок technology*/
 #technology{
-    padding-top: 115px;
+    padding: 115px 0 95px 0;
     position: relative;
+}
+#technology .container{
+    position: relative;
+
 }
 #technology h2{
     line-height: 54px;
@@ -165,17 +170,70 @@ header{
     display: flex;
     text-align: center;
     justify-content: center;
+    margin-bottom: 14px;
 }
 .slide-links li{
-    width: 21%;
+    width: 21.2%;
     margin: 0 1%;
 }
 .slide-link p{
     margin-top: 15px;
 }
-.slide{
+.slider{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
     color: #202020;
+    overflow: hidden;
+}
+.slider-prev,
+.slider-next{
+    cursor: pointer;
+    position: absolute;
+    top: 66%;
+}
+.slider-prev{
+    left: -60px;
+}
+.slider-next{
+    right: -60px;
+}
+.slider-next svg{
+    transform: rotate(180deg);
+}
+.slider-prev:hover path,
+.slider-next:hover path{
+    stroke: #C91226;
+}
+.slides{
     display: flex;
+    transition: transform 0.5s ease;
+
+}
+.slide{
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slide-img{
+    width: 35%;
+}
+.slide-img img{
+    max-width: 100%;
+    height: auto;
+}
+.descript-slide{
+    width: 48%;
+}
+.descript-slide h3{
+    font-size: 37px;
+    margin: 10px 0 25px 0;
+
+}
+.descript-slide p{
+    line-height: 25px;
 }
 .slide-ico{
     display: inline-block;
@@ -188,10 +246,184 @@ header{
     display: none;
     top: 0;
 }
-.slide-links a.actve{
+.slide-link.active p{
     color: #C91226;
 }
 .slide-link.active .ico-active{
     display: block;
 }
 
+/*блог advanc-sol*/
+#advanc-sol{
+    background: 
+        url(../img/solutions-left-bg.png) no-repeat top left,
+        #2E2E2E url(../img/solutions-right-bg.png) no-repeat right 58px;
+    padding: 146px 0 144px 0;
+    box-shadow: 0px 3px 4px 2px #2E2E2E;
+    position: relative;
+    z-index: 100;
+}
+.advance-block{
+    width: 31%;
+}
+.advance-list{
+    font-size: 18px;
+    line-height: 28px;
+    margin: 70px 0 60px 0;
+}
+.advance-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.advance-img{
+    width: 60px;
+    margin-right: 33px;
+}
+.advance-img img{
+    vertical-align: middle;
+}
+.advanc-descript{
+    font-size: 14px;
+    line-height: 22px;
+}
+.advanc-descript p{
+    margin-top: 6px;
+}
+
+
+/*advant-partners блок*/
+#advant-partners{
+    background: url(../img/advant-decor.svg) 22px 95px no-repeat,
+    linear-gradient(to right,#C91226 50%, #FBFBFB 50%);
+    padding: 140px 0 110px 0;
+    
+}
+#advant-partners .container{
+    display: flex;
+}
+.advant, .partners{
+    width: 50%;
+}
+.advant h2{
+    line-height: 66px;
+    margin-bottom: 63px;
+}
+.advant-list{
+    width: 65%;
+    font-size: 20px;
+    line-height: 28px;
+
+}
+.advant-list li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+.advant-img{
+    margin-right: 42px;
+}
+.advant-img img{
+    vertical-align: middle;
+}
+.partners{
+    padding: 6px 0 0 45px;
+    box-sizing: border-box;
+}
+.partners h2{
+    color: #202020;
+    line-height: 54px;
+    margin-bottom: 127px;
+    margin-left: 16px;
+}
+.partner-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.partner-list li{
+    width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+/*managment*/
+#managment{
+    color: #202020;
+    padding: 136px 0 92px 0;
+    background: url(../img/manag-decor.png)no-repeat 5px 10px,
+    url(../img/manag-decor.png)no-repeat 86% 138%;
+}
+#managment .logo{
+    margin-bottom: 20px;
+}
+#managment h2{
+    line-height: 72px;
+    margin-bottom: 64px;
+}
+.managment-blog{
+    display: flex;
+}
+.managment-blog ol{
+    width: 50%;
+    counter-reset: list-counter;
+    box-sizing: border-box;
+}
+.managment-blog li {
+    counter-increment: list-counter; /* Увеличиваем счётчик */
+    position: relative;
+}
+  
+.managment-blog li::before {
+    content: counter(list-counter); /* Вставляем номер */
+    position: absolute;
+    left: -19px;
+    top: 26px;
+    background: rgba(201, 18, 38, 1); /* Фон номера */
+    color: white; /* Цвет текста */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Скругляем до круга */
+    font-size: 20px;
+}
+
+.managment-list li{
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    width: 76%;
+    padding: 30px 35px;
+    margin-bottom: 29px;
+    border-radius: 5px;
+}
+#managment h3{
+    line-height: 26px;
+}
+.managment-list p{
+    color: #717171;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 17px; 
+}
+.interests-list{
+    background: url(../img/control-ico.svg) no-repeat 126px 160px,
+    url(../img/interests-circle.png) no-repeat -33px 10px;
+    line-height: 23px;
+    padding: 21px 0 0 282px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+.interests-list li::before{
+    top: 2px;
+    left: -6px;
+}
+.interests-list li{
+    padding: 8px 50px;
+    margin-bottom: 57px;
+}
+.interests-list li:not(:first-child,:last-child){
+    margin-left: 58px;
+}
