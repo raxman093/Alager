@@ -111,3 +111,14 @@ function highlightMenu() {
 window.addEventListener("scroll", highlightMenu);
 // Инициализация на старте
 highlightMenu();
+
+
+// Находим элементы
+const burgerBtn = document.querySelector('.burger-menu');
+const menu = document.querySelector('.site-nav');
+
+// Добавляем обработчик событий
+burgerBtn.addEventListener('click', () => {
+  // Переключаем класс active у меню
+  menu.classList.toggle('active');
+});

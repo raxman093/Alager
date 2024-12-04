@@ -82,6 +82,10 @@ header{
     width: 100%;
     box-sizing: border-box;
 }
+.burger-menu{
+    display: none;
+    cursor:pointer;
+}
 .site-nav{
     display: flex;
     align-items: center;
@@ -417,18 +421,21 @@ header{
     background: url(../img/control-ico.svg) no-repeat 126px 160px,
     url(../img/interests-circle.png) no-repeat -33px 10px;
     line-height: 23px;
-    padding: 21px 0 0 282px;
+    padding-left: 282px;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .interests-list li::before{
-    top: 2px;
+    
     left: -6px;
 }
 .interests-list li{
     padding: 8px 50px;
-    margin-bottom: 57px;
+    margin-top: 15px;
+    height: 68px;
+    display: flex;
+    align-items: center;
 }
 .interests-list li:not(:first-child,:last-child){
     margin-left: 58px;
@@ -442,6 +449,9 @@ header{
 #news h2{
     line-height: 72px;
     color: #202020;
+}
+.buttons{
+    display: flex;
 }
 .upper-block-news{
     display: flex;
@@ -621,3 +631,384 @@ header{
   .contacts-info span:first-child{
     margin-right: 20px;
   }
+  @media (max-width: 1630px){
+    .slider-prev {
+        left: 70px;
+    }
+    .slider-next {
+        right: 70px;
+    }
+  }
+  @media (max-width: 1530px){
+    .container{
+        width: 1100px;
+    }
+    .slider-prev {
+        left: 20px;
+    }
+    .slider-next {
+        right: 20px;
+    }
+    .advance-block {
+        width: 39%;
+    }
+    #advanc-sol{
+        background: url(../img/solutions-left-bg.png) no-repeat top left, 
+        #2E2E2E url(../img/solutions-right-bg.png)  right center / 50% no-repeat;
+    }
+    .news-slider,
+    .upper-block-news{
+        width: 88%;
+        margin: 0 auto 47px auto;
+    }
+    .side-menu{
+        right: 20px;
+    }
+
+  }
+  @media (max-width: 1260px){
+    .container {
+        width: 968px;
+    }
+    .site-nav li{
+        margin: 0 15px;
+    }
+    #technology {
+        padding: 67px 0 45px 0;
+    }
+    #advanc-sol,
+    #advant-partners,
+    #managment,
+    #news,
+    #discuss {
+        padding: 80px 0 60px 0;
+    }
+    .discuss-topics a {
+        width: 100px;
+    }
+    .discuss-topics-icons {
+        width: 100px;
+        height: 100px;
+    }
+    .news-slider,
+    .upper-block-news{
+        width: 100%;
+    }
+    #advanc-sol{
+        background: url(../img/solutions-left-bg.png) no-repeat top left, 
+        #2E2E2E url(../img/solutions-right-bg.png)  right center / 50% no-repeat;
+    }
+    .advance-block {
+        width: 48%;
+    }
+    .partner-list img {
+        max-width: 80px;
+    }
+    .interests-list{
+        padding-left: 250px;
+        background: url(../img/control-ico.svg) no-repeat 126px 160px, url(../img/interests-circle.png) no-repeat -63px 10px;
+        
+    }
+  }
+@media (max-width: 1140px){
+    .side-menu{
+        display: none;
+    }
+    .container {
+        width: 920px;
+        padding: 0 20px;
+    }
+    h1, h2{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .descript-slide h3{
+        font-size: 24px;
+    }
+    .site-nav li {
+        margin: 0 10px;
+    }
+    .slider-next, .slider-prev {
+        display: none;
+    }
+    .interests-list {
+        padding-left: 162px;
+        background: url(../img/control-ico.svg) no-repeat 35px 160px, url(../img/interests-circle.png) no-repeat -152px 10px;
+    }
+    .news-item{
+        flex: 0 0 303px;
+    }
+    .slide-links li{
+        width: 24%;
+    }
+    .advant h2 {
+        line-height: 44px;
+        margin-bottom: 30px;
+    }
+    .partners h2 {
+        line-height: 44px;
+        margin-bottom: 70px;
+    }
+}
+@media (max-width: 980px){
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    h1, h2 {
+    font-size: 28px;
+    }
+    .burger-menu{
+        display: block;
+    }
+
+    .site-nav{
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        background: #2e2e2e;
+        left: 0;
+        top: 48px;
+        width: 100%;
+        flex-direction: column;
+        transition: max-height 1s ease;
+    }
+    .site-nav.active{
+        max-height: 400px;
+    }
+    .burger-menu:active .site-nav{
+        display: flex;
+    }
+    .site-nav li {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        box-sizing: border-box;
+    }
+    .site-nav li a {
+        display: block;
+        border-radius: 0;
+        padding: 10px;
+    }
+    .slide-links li p{
+        display: none;
+    }
+    .descript-slide {
+        width: 60%;
+    }
+    .advance-block {
+        width: 70%;
+    }
+    .advance-list {
+
+        line-height: 24px;
+        margin: 35px 0 38px 0;
+    }
+    #advant-partners{
+        background: #fff;
+        padding: 0;
+    }
+    #advant-partners .container {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .advant, .partners {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .advant{
+        background: #C91226 url(../img/advant-decor.svg) 0 20px no-repeat;
+        padding: 64px 20px 20px 20px;
+    }
+    .partners{
+        background-color: #FBFBFB;
+        padding: 64px 20px 20px 20px;
+    }
+
+    .managment-list li {
+        padding: 18px 28px;
+        margin-bottom: 20px;
+    }
+    .interests-list {
+        padding-left: 60px;
+        background: url(../img/control-ico.svg) no-repeat -2px 160px, url(../img/interests-circle.png) no-repeat -254px 10px;
+    }
+    .interests-list li {
+        padding: 8px 5px 8px 50px;
+    }
+    #news h2{
+        line-height: 44px;
+    }
+    .news-item {
+        flex: 0 0 33%;
+    }
+    .news-descript {
+        padding: 13px;
+        display: block;
+    }
+    .news-slider, .upper-block-news {
+        margin: 0 auto 23px auto;
+    }
+    #discuss ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .discuss-topics li{
+        flex: 0 0 20%;
+        margin-bottom: 20px;
+    }
+    .discuss-topics a {
+        width: 100%;
+        margin: 0 auto;
+    }
+    footer .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+@media (max-width: 740px){
+    #advanc-sol, #managment, #news, #discuss {
+        padding: 45px 0 55px 0;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    h1, h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    #technology h2 {
+        line-height: 30px;
+        margin-bottom: 36px;
+    }
+    .descript-slide h3 {
+        font-size: 22px;
+        margin: 10px 0 14px 0;
+    }
+    .advance-block {
+        margin: 0 auto;
+    }
+    .advant-list {
+        width: 70%;
+        font-size: 15px;
+        line-height: 23px;
+        margin: 0 auto;
+    }
+    .advant h2 {
+        line-height: 34px;
+        margin-bottom: 26px;
+        text-align: center;
+    }
+    #managment h2, .partners h2 {
+        line-height: 28px;
+        margin-bottom: 38px;
+    }
+    .managment-blog{
+        flex-direction: column;
+    }
+    .managment-blog ol {
+        width: 90%;
+        margin-left: 20px;
+    }
+    .news-item {
+        flex: 0 0 50%;
+    }
+    footer .container{
+        display: block;
+        text-align: center;
+    }
+}
+@media (max-width: 480px){
+    #hero {
+        padding: 110px 0 80px 0;
+    }
+    .data-hero {
+        font-size: 12px;
+    }
+    h1, h2 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    #hero h1{
+        margin-bottom: 25px;
+    }
+    #hero p {
+        line-height: 20px;
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .present-download {
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 14px;
+        border-radius: 5px;
+        width: 100%;
+        padding: 20px 20px 19px 50px;
+        background: #FF2A42 url(../img/pdf-ico.png) 19px center / 9% no-repeat;
+    }
+    #technology h2,
+    #advanc-sol h2,
+    #advant-partners h2,
+    #news h2,
+    #discuss h2{
+        font-size: 32px;
+        line-height: 40px;
+        text-align: start;
+    }
+    .slider, .descript-slide{
+        width: 100%;
+    }
+    .slide-img {
+        display: none;
+    }
+    .slide-links{
+        margin-bottom: 50px;
+    }
+    .advance-block {
+        width: 100%;
+    }
+    .advance-list {
+        line-height: 18px;
+        font-size: 13px;
+    }
+    .advant{
+        padding: 64px 10px 20px 10px;
+    }
+    .advant-list{
+        width: 100%;
+    }
+    .advant-list li {
+        margin-bottom: 38px;
+    }
+    .partners h2 {
+        margin-left: 0px;
+    }
+    .partner-list img {
+        max-width: 50px;
+    }
+    .partner-list li {
+        margin-bottom: 30px;
+    }
+    .managment-blog .interests-list{
+        font-size: 14px;
+        margin-left: 0;
+    }
+    .interests-list {
+        padding-left: 45px;
+        background: url(../img/control-ico.svg) no-repeat -7px 160px, url(../img/interests-circle.png) no-repeat -270px 10px;
+    }
+    .buttons{
+        display: none;
+    }
+    .news-item {
+        flex: 0 0 100%;
+    }
+    #discuss .discuss-nav{
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+}
